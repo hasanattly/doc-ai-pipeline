@@ -35,26 +35,26 @@ Input (PDF/Image)
 
               │
               ▼
-      ┌─────────────────┐
-│   OCREngine     │  EasyOCR — text blocks, bounding boxes, confidence scores
-└────────┬────────┘
-│
-▼
-┌─────────────────┐
-│ DocumentParser  │  Regex + keyword — type detection, field extraction
-└────────┬────────┘
+     ┌─────────────────┐
+     │   OCREngine     │  EasyOCR — text blocks, bounding boxes, confidence scores
+     └────────┬────────┘
+              │
+              ▼
+    ┌─────────────────┐
+    │ DocumentParser  │  Regex + keyword — type detection, field extraction
+    └────────┬────────┘
 
-│
-▼
-┌─────────────────┐
-│ StorageManager  │  SQLAlchemy ORM → SQLite (documents, fields, line_items)
-└────────┬────────┘
-│
-▼
-┌─────────────────┐
-│  Streamlit UI   │  Upload, process, visualize, export (JSON/CSV/TXT/PDF)
-└─────────────────┘
----
+             │
+             ▼
+    ┌─────────────────┐
+    │ StorageManager  │  SQLAlchemy ORM → SQLite (documents, fields, line_items)
+    └────────┬────────┘
+             │
+             ▼
+    ┌─────────────────┐
+    │  Streamlit UI   │  Upload, process, visualize, export (JSON/CSV/TXT/PDF)
+    └─────────────────┘
+            ---
 
 ## 🛠️ Tech Stack
 
