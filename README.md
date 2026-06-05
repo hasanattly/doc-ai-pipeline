@@ -26,11 +26,13 @@ This pipeline accepts scanned documents (PDFs or images) and automatically:
 
 ## 🏗️ Architecture
 Input (PDF/Image)
+
 │
 ▼
 ┌─────────────────┐
 │ ImageProcessor  │  OpenCV — grayscale, denoise, deskew, quality detection
 └────────┬────────┘
+
 │
 ▼
 ┌─────────────────┐
@@ -41,6 +43,7 @@ Input (PDF/Image)
 ┌─────────────────┐
 │ DocumentParser  │  Regex + keyword — type detection, field extraction
 └────────┬────────┘
+
 │
 ▼
 ┌─────────────────┐
