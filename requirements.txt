@@ -1,0 +1,24 @@
+# ── PDF & Image Handling ──────────────────────────────
+pymupdf==1.24.5          # PDF to image conversion (fitz)
+Pillow==10.3.0           # Image loading and manipulation
+
+# ── Image Preprocessing ──────────────────────────────
+opencv-python-headless==4.9.0.80  # OpenCV (headless = no GUI, safe for Docker)
+
+# ── OCR Engine ───────────────────────────────────────
+easyocr==1.7.1           # Primary OCR engine
+
+# ── Data Handling ────────────────────────────────────
+pandas==2.2.2            # Structured data wrangling
+
+# ── Storage ──────────────────────────────────────────
+SQLAlchemy==2.0.30       # Database ORM (works with SQLite + PostgreSQL)
+
+# ── UI ───────────────────────────────────────────────
+streamlit==1.35.0        # Frontend interface
+
+# ── Utilities ────────────────────────────────────────
+python-dotenv==1.0.1     # Environment variable management
+loguru==0.7.2            # Clean logging (much better than print statements)
+fpdf2==2.7.9
+reportlab==4.1.0

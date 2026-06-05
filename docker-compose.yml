@@ -1,0 +1,15 @@
+
+services:
+  doc-ai-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: doc-ai-pipeline
+    ports:
+      - "8501:8501"        # Streamlit UI → localhost:8501
+    volumes:
+      - ./data:/app/data   # Live sync: your input/output folders
+      - ./db:/app/db       # Live sync: SQLite database file
+      - ./src:/app/src     # Live sync: code changes reflect instantly
+    environment:
+      - PYTHONUNBUFFERED=1
