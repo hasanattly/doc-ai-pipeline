@@ -27,15 +27,15 @@ This pipeline accepts scanned documents (PDFs or images) and automatically:
 ## 🏗️ Architecture
 Input (PDF/Image)
 
-        │
-        ▼
-┌─────────────────┐
-│ ImageProcessor  │  OpenCV — grayscale, denoise, deskew, quality detection
-└────────┬────────┘
+              │
+              ▼
+     ┌─────────────────┐
+     │ ImageProcessor  │  OpenCV — grayscale, denoise, deskew, quality detection
+     └────────┬────────┘
 
-         │
-         ▼
-┌─────────────────┐
+              │
+              ▼
+      ┌─────────────────┐
 │   OCREngine     │  EasyOCR — text blocks, bounding boxes, confidence scores
 └────────┬────────┘
 │
